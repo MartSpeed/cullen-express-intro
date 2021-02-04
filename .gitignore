@@ -1,3 +1,3 @@
-#to avoid ripping hole in psace time
-# ignore this folder
+#to avoid ripping hole in space time
+# ignore this folder inside of express so that the whole pkg module is not pushed into your repo
 node_modules/
