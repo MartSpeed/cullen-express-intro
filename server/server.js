@@ -1,7 +1,8 @@
 // if we dont put ./ it will look for a node module in express and import that folder
 const express = require('express');
 //console.log('express', express);
-
+// import the quotes module
+const quotes = require('./module/qoutes');
 // create our app
 //app becomes and object that can call express
 const app = express();
@@ -35,4 +36,9 @@ app.use(express.urlencoded({ extended: true }));
 app.listen(port, function () {
   // when the server is ready, call this function
   console.log('im listening', port);
+});
+// setting up a new route using the get() argument
+app.get('/qoutes', function (req, res) {
+  console.log('GET request for quotes');
+  res.send(quotes.getNextQuote());
 });
