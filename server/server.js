@@ -27,6 +27,9 @@ app.use(express.static('server/public'));
  */
 
 // listen for network request
+// using the variable named "app" to let us know what functions we will be using
+// with the express library under the app name using the dor operator
+// we setup a listener that listens to http request so it can do something
 app.listen(port, function () {
   // when the server is ready, call this function
   console.log('im listening', port);
