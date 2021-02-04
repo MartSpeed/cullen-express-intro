@@ -14,6 +14,8 @@ const port = 5000;
 // this line is a path to a file
 // static meaning they are there and not being loaded
 app.use(express.static('server/public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // listen for network requests
 // this is a listener
