@@ -47,3 +47,16 @@ app.get('/quotes', function (req, res) {
   console.log('GET request for quotes');
   res.send(quotes());
 });
+
+// adding a new quote, using the "POST" method
+// the "POST" method takes a path name, "/quotes"
+// can also be written as an arrow function, check notes
+app.post('/qoutes', function (req, res) {
+  // we are receiving a request in
+  // inside this request there is an object called quote_to_add
+  // quote_to_add contains the authors and quote information
+  // then we are going to add this information to our quote list
+  let quote = req.body.quote_to_add;
+  console.log(quote.author);
+  console.log(quote.quote);
+});

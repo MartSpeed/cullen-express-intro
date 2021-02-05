@@ -25,11 +25,11 @@ function getNextQuote() {
     },
   ];
 
-  // put the login in to return a function
+  // put the quote in to return a function
   const result = quotesData[index];
-  //set the index
+  //set the quote index
   index += 1;
-  //ensures the API always return a value
+  //ensures the API always return a whole number value
   index = index % quotesData.length;
   // log the result to
   console.log('this is the result', result);
