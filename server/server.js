@@ -43,6 +43,7 @@ app.listen(port, function () {
 // setting up a new route using the get() argument
 // tells the server to get that value
 // tell your server when youre done and when to send this information
+// GET ENDPOINT
 app.get('/quotes', function (req, res) {
   console.log('GET request for quotes');
   res.send(quotes.getNextQuote());
@@ -51,6 +52,7 @@ app.get('/quotes', function (req, res) {
 // adding a new quote, using the "POST" method
 // the "POST" method takes a path name, "/quotes"
 // can also be written as an arrow function, check notes
+// POST ENDPOINT
 app.post('/quotes', function (req, res) {
   // we are receiving a request in
   // inside this request there is an object called quote_to_add
