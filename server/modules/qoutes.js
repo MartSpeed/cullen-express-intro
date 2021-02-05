@@ -4,10 +4,10 @@
 // instantiates at index 0 which we have set as the staring point
 // the result is set to be the index of the quotes
 // increment the index
-//
+// retrieve a quote from an array
+let index = 0;
+
 function getNextQuote() {
-  // retrieve a quote from an array
-  let index = 0;
   // const quotesData = [
   //   {
   //     quote:

@@ -45,7 +45,7 @@ app.listen(port, function () {
 // tell your server when youre done and when to send this information
 app.get('/quotes', function (req, res) {
   console.log('GET request for quotes');
-  res.send(quotes());
+  res.send(quotes.getNextQuote());
 });
 
 // adding a new quote, using the "POST" method
@@ -59,4 +59,9 @@ app.post('/qoutes', function (req, res) {
   let quote = req.body.quote_to_add;
   console.log(quote.author);
   console.log(quote.quote);
+
+  // add to the quotesData
+  quotes.addQuote(quote);
+  // then respond with something
+  res.sendStatus(200);
 });
