@@ -51,7 +51,7 @@ app.get('/quotes', function (req, res) {
 // adding a new quote, using the "POST" method
 // the "POST" method takes a path name, "/quotes"
 // can also be written as an arrow function, check notes
-app.post('/qoutes', function (req, res) {
+app.post('/quotes', function (req, res) {
   // we are receiving a request in
   // inside this request there is an object called quote_to_add
   // quote_to_add contains the authors and quote information

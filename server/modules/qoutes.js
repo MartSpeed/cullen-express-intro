@@ -40,6 +40,7 @@ function getNextQuote() {
 //
 function addQuote(quoteData) {
   quotesData.push(quoteData);
+  console.log('number of new quotes', quotesData.length);
   return true;
 }
 
