@@ -49,6 +49,18 @@ app.get('/quotes', function (req, res) {
   res.send(quotes.getNextQuote());
 });
 
+/**
+ * GETALLTHEQUTOES END POINT
+ *
+ * build an array that generates all of the quotes
+ */
+app.get('/allTheQuotes', function (req, res) {
+  console.log('GET /allTheQuotes');
+
+  // in my response .res() I want to send back
+  // send back the entire list of quotes
+  res.send(quotes.quoteList);
+});
 // adding a new quote, using the "POST" method
 // the "POST" method takes a path name, "/quotes"
 // can also be written as an arrow function, check notes

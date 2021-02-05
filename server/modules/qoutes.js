@@ -45,4 +45,8 @@ function addQuote(quoteData) {
 }
 
 // a module needs to be imported into another script
-module.exports = { getNextQuote, addQuote };
+module.exports = {
+  getNextQuote: getNextQuote,
+  addQuote: addQuote,
+  quoteList: quotesData,
+};
