@@ -43,7 +43,7 @@ app.listen(port, function () {
 // setting up a new route using the get() argument
 // tells the server to get that value
 // tell your server when youre done and when to send this information
-app.get('/qoutes', function (req, res) {
+app.get('/quotes', function (req, res) {
   console.log('GET request for quotes');
   res.send(quotes());
 });
