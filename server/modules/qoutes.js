@@ -32,8 +32,8 @@ function getNextQuote() {
   //ensures the API always return a value
   index = index % quotesData.length;
   // log the result to
-  console.log('this is the result', result);
-  return result;
+  return console.log('this is the result', result);
+  //return result;
 }
 
 // a module needs to be imported into another script
