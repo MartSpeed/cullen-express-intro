@@ -64,6 +64,10 @@ app.get('/allTheQuotes', function (req, res) {
   res.send(quotes.quoteList);
 });
 
+app.get('/cool-things', function (req, res) {
+  res.send('<h1>Cool Things</h1>');
+});
+
 // adding a new quote, using the "POST" method
 // the "POST" method takes a path name, "/quotes"
 // can also be written as an arrow function, check notes
