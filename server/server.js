@@ -52,15 +52,14 @@ app.get('/quotes', function (req, res) {
 });
 
 /**
- * GETALLTHEQUTOES END POINT
+ * GETALLTHEQUOTES END POINT
  *
  * build an array that generates all of the quotes
  */
 app.get('/allTheQuotes', function (req, res) {
   console.log('GET /allTheQuotes');
 
-  // in my response .res() I want to send back
-  // send back the entire list of quotes
+  // in my response .res() I want to send back the entire list of quotes
   res.send(quotes.quoteList);
 });
 
@@ -78,6 +77,8 @@ app.post('/quotes', function (req, res) {
   // quote_to_add contains the authors and quote information
   // then we are going to add this information to our quote list
   let quote = req.body.quote_to_add;
+  console.log('this is the request', req);
+  console.log('this is request.body', req.body);
   console.log(quote.author);
   console.log(quote.quote);
 

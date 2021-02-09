@@ -45,5 +45,9 @@ function onReady() {
         `);
       }
       // and .append() to the DOM
+    })
+    // if something fails were going to do something
+    .catch(function () {
+      $('#messages').text('Oh My Glob, This party is not for LSP');
     });
 }
