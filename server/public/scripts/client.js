@@ -27,6 +27,7 @@ function onReady() {
 
   // set the ajax function using the variable path object
   // shorthand $.ajax() will have the variable data put directly into the $.ajax() function call
+  // this function contains the client data to be sent to the server
   $.ajax({
     url: '/allTheQuotes',
     method: 'GET',
@@ -34,12 +35,15 @@ function onReady() {
     // using the .then() method to get a response from the GET function
     .then(function (quoteList) {
       console.log('got a response', quoteList);
-      //let quoteList = response;
+      // take array of loops
+      //loop d' loop through em
       for (let quote of quoteList) {
-        quote = $('#insert_quote').append(`
+        $('#insert_quote').append(`
         <li>
-        ${quote.quote}, ${quote.author}
-        </li>`);
+        <blockquote>${quote.quote} by ${quote.author}</blockquote>
+      </li>
+        `);
       }
+      // and .append() to the DOM
     });
 }
